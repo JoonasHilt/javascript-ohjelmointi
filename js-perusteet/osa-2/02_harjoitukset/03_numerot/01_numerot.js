@@ -1,15 +1,14 @@
 // Täydennä funktio convertNumberToString niin, että se muuntaa saamansa numeron merkkijonoksi.
 // Täydennä funktio convertStringToNumber niin, että se muuntaa saamansa merkkijonon numeroksi.
 
-function convertNumberToString(number = 30) {
+function convertNumberToString(number) {
   return number.toString();
 }
-console.log(convertNumberToString(30));
 
-function convertStringToNumber(string = "10") {
-  return parseInt(string, 10);
+function convertStringToNumber(string) {
+  let number = Number.parseInt(string, 10);
+  return number;
 }
-console.log(convertStringToNumber("10"));
 
 // Esimerkki - älä muokkaa
 console.log(convertNumberToString(42)); // haluttu vastaus: "42"

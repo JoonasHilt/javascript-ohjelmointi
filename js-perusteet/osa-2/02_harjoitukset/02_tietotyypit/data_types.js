@@ -25,7 +25,7 @@ console.log("Is studen:", isStudent);
 console.log("Hobbies:", hobbies);
 console.log("Info:", info);
 // printtaa muuttujan tietotyypin.
-console.log("Type of age:", typeof age);
+console.log("Type of age:", typeof age); //esim. tämä printtaa = Type of age: number (määritelty srting ja muuttujan tietotyypin)
 console.log("Type of name:", typeof name);
 console.log("Type of isStundent:", typeof isStudent);
 console.log("Type of hobbies:", typeof hobbies);

@@ -10,5 +10,33 @@
 - Käytä typeof operaattoria tarkistaaksesi jokaisen uuden muuttujan tietotyypin ja tulosta tulos käyttäen console.log().
 */
 
-let num1 = 4.5;
-let num2 = 10.5;
+/* liukuarvot */
+
+let num1 = 5.8;
+let num2 = 7.4;
+
+/* Pyöristetään arvot lähimpään kokonaislukuun */
+
+let roundedNum1 = Math.round(num1);
+let roundedNum2 = Math.round(num2);
+
+/* lasketaan neilöjuuri */
+
+let sqrtNum1 = Math.sqrt(roundedNum1);
+
+/* Etsitään suuermpi numero */
+
+let maxNum = Math.max(roundedNum1, roundedNum2);
+
+/* konsolit printtaukseen */
+
+console.log("roundedNum1:", roundedNum1);
+console.log("roundedNum2:", roundedNum2);
+console.log("sqrtNum1:", sqrtNum1);
+console.log("maxNum:", maxNum);
+
+/* tarkistetaan muuttujien tietotyypit */
+console.log("type of rounedNum1:", typeof roundedNum1);
+console.log("type of rounedNum2:", typeof roundedNum2);
+console.log("type of sqrtNum:", typeof sqrtNum1);
+console.log("type of maxNum:", typeof maxNum);

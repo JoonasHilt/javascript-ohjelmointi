@@ -6,7 +6,11 @@ Palauttaa merkkijonon, joka yhdistää numeron ja sopivasti taipuvan muodon subs
 
  */
 
-function pluralize(substantiivi, määrä) {}
+function pluralize(substantiivi, määrä) {
+  if (määrä >= 0) {
+    return määrä + substantiivi;
+  }
+}
 
 // Esimerkkikäyttö - älä muokkaa
 console.log("Minulla on " + pluralize("kala", 0));

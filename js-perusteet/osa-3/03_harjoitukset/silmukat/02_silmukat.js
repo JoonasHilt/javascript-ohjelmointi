@@ -5,7 +5,7 @@
 let tulos = "";
 for (let evenInteger = 1; evenInteger <= 99; evenInteger++) {
   if (evenInteger % 2 === 0) {
-    tulos += evenInteger + "";
+    tulos += evenInteger + ", ";
   }
 }
 

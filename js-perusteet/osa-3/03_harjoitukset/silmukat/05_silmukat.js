@@ -3,13 +3,15 @@
 // Lopetettuaan ohjelman tulisi laskea ja näyttää kaikkien syötettyjen numeroiden keskiarvo.
 
 let numbs; // tallentaa syötetyn numeron
-let lukumaara = 0;
-let summa = 0;
+let lukumaara = 0; // pitää krijaa syötettyjen numeroiden määrästä
+let summa = 0; // pitää krijaa syötettyjen numeroiden summasta
 
+// ikunen silmukka while (ture) komennolla kunnes se keskeytetään break käskyllä!
 while (true) {
-  numbs = Number(prompt("Syötä numero!"));
+  numbs = Number(prompt("Syötä numero!")); // pyytä syöttämään numeron joka tallennetaan muuttujaan numbs.
 
   if (numbs === 0) {
+    // jos syötetty numero 0, silmukka keskeytetään ja tulostetaan "ohjelma päättyi numeroon 0"
     console.log("Ohjelma päättyi numeroon 0");
     break;
   }

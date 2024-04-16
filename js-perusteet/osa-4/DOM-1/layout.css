@@ -19,4 +19,5 @@ button {
 
 button:hover {
   background-color: seagreen;
+  transition: ease 0.5s;
 }

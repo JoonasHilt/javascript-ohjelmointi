@@ -9,6 +9,19 @@ Kun nappia klikataan, funktion tulisi:
 Varmista, että syötekenttä tyhjennetään hedelmän lisäämisen jälkeen.
 */
 
-const fruit_input = document.getElementById("fruitInput");
+function addFruitBtn() {
+  // hakee inputin ja sen arvon
+  const input = document.getElementById("fruitInput");
+  const inputValue = input.value;
 
-function getInputVal() {}
+  // tee uusi li element
+  const newListItem = document.createElement("li");
+  newListItem.textContent = inputValue;
+
+  // hakee ul elementin ja lisää li elementin sinne
+  const list = document.getElementById("fruitList");
+  list.appendChild(newListItem);
+
+  // tyhjentään input kentän edellisen syötön jälkeen
+  input.value = "";
+}

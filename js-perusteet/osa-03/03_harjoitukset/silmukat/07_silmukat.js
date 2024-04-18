@@ -28,3 +28,22 @@ if (lukumaara > 0) {
   console.log("Pienin syötetty numero on:", pienin);
   console.log("Suurin syötetty numero on:", suurin);
 }
+
+//toinen vaihtoehto alapuolella for loopilla
+let sum = 0;
+let lukujenMaara = 0;
+let numerot = [];
+
+for (let input = 0; input < 10; input++) {
+  let input = Number(prompt("Anna lukuja laskuihin."));
+  sum += input;
+  lukujenMaara++;
+  numerot.push(input); // pistää syötetyt numerot listaan
+  console.log("Syötetty luku:", input); // printtaa konsoliin syöttäessä lukuja
+}
+
+let average = summa / lukujenMaara;
+console.log("Lukujen keskiarvo on", average);
+console.log("Lukujen lopullinen summa on:", sum);
+console.log("Pienin numero on:", Math.min(...numerot)); // käytetään spread operaattoria joka laajentaan joukon numeroita yksittäisiksi elementeiksi jotta Mat.min/max osaa poimia sieltä oikean
+console.log("Suurin numero on:", Math.max(...numerot));

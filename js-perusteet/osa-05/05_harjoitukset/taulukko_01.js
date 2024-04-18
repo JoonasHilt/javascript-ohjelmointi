@@ -3,18 +3,29 @@ let teamMembers = ["Jukka", "Emilia", "Miikka", "Saara"];
 
 // Harjoitus 1: Käy läpi `teamMembers` ja kirjaa jokainen nimi konsoliin.
 // Kirjoita koodisi tähän:
+console.log(
+  `Tiimin jäsenet ovat: ${teamMembers[0]}, ${teamMembers[1]}, ${teamMembers[2]} ja ${teamMembers[3]}`
+);
 
 // Harjoitus 2: Poista ensimmäinen jäsen taulukosta.
 // Kirjoita koodisi tähän:
+teamMembers.shift();
+console.log(teamMembers);
 
 // Harjoitus 3: Poista taulukon viimeinen jäsen.
 // Kirjoita koodisi tähän:
+teamMembers.pop();
+console.log(teamMembers);
 
 // Harjoitus 4: Lisää uusi jäsen "Aleksi" taulukon alkuun.
 // Kirjoita koodisi tähän:
+teamMembers.unshift("Aleksi");
+console.log(teamMembers);
 
 // Harjoitus 5: Lisää uusi jäsen "Linda" taulukon loppuun.
 // Kirjoita koodisi tähän:
+teamMembers.splice(4, 0, "Linda");
+console.log(teamMembers);
 
 // Harjoitus 6: Luo uusi taulukko, joka ei sisällä kahta ensimmäistä jäsentä.
 // Kirjoita koodisi tähän:

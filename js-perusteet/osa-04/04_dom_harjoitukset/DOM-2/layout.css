@@ -10,12 +10,29 @@ body {
 }
 
 div {
-  margin-top: 25%;
+  min-height: 300px;
+  margin-top: 5%;
   margin-left: 40%;
   border: 2px solid black;
   padding: 25px;
   background: url(./images/fruit-mix.webp);
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 525px;
   width: 45%;
+}
+
+button {
+  color: #eee;
+  font-size: 16px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+input {
+  color: #eee;
+  font-size: 16px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
 }

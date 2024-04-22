@@ -9,6 +9,18 @@ Kun nappia klikataan, funktion tulisi:
 Varmista, että syötekenttä tyhjennetään hedelmän lisäämisen jälkeen.
 */
 
+// reagoi "Enter" napin painallukseen
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("fruitInput");
+
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      addFruitBtn();
+      event.preventDefault();
+    }
+  });
+});
+
 function addFruitBtn() {
   // hakee inputin ja sen arvon
   const input = document.getElementById("fruitInput");

@@ -1,31 +1,32 @@
-//---//
 document.addEventListener("DOMContentLoaded", function () {
-  // määritellään muuttujat
+  // Define variables
   const typeSelect = document.getElementById("type");
   const toppingCheckboxes = document.querySelectorAll(
     ".customization-section input[type='checkbox']"
   );
-  //päivitettävä hinta
   const totalPriceDisplay = document.querySelector(
     ".price-display #totalPrice"
   );
+  const basePriceDisplay = document.querySelector("#basePrice");
 
-  //funktio kokonaishinnan päivittämiseen
+  // Function to update the total price
   function updateTotalPrice() {
-    let totalPrice = parseInt(typeSelect.value);
+    let basePrice = parseInt(typeSelect.value); // Get the base price from the select option
+    let totalPrice = basePrice; // Start the total price with the base price
 
-    //lisää lisukkeiden hinnat
+    // Add the prices of checked toppings
     toppingCheckboxes.forEach(function (checkbox) {
       if (checkbox.checked) {
         totalPrice += parseInt(checkbox.value);
       }
     });
 
-    //päivitä kokonaishinta näytölle
+    // Update the display for total price and base price
     totalPriceDisplay.textContent = totalPrice + "€";
+    basePriceDisplay.textContent = basePrice + "€";
   }
 
-  //valinnoille evenlistenerit
+  // Event listeners for select dropdown and checkboxes
   typeSelect.addEventListener("change", updateTotalPrice);
   toppingCheckboxes.forEach(function (checkbox) {
     checkbox.addEventListener("change", updateTotalPrice);

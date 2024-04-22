@@ -4,5 +4,6 @@ Kirjoita funktio, joka päivittää valitun elementin tekstisisällön painamall
 */
 
 function changeText() {
-  document.getElementById("content").textContent = "Hello World!";
+  const textChange = document.getElementById("content");
+  textChange.textContent = "Hei, maailma!";
 }

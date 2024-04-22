@@ -42,20 +42,33 @@ console.log(teamMembers.indexOf("Jaakko"));
 
 // Harjoitus 9: Käytä `splice` poistaaksesi "Miikka" ja lisätäksesi "Karoliina" ja "Bettina" hänen tilalleen.
 // Kirjoita koodisi tähän:
+teamMembers.splice(0, 1, "Karoliina", "Bettina");
+console.log(teamMembers);
 
 // Harjoitus 10: Liitä uusi jäsen "Hemmo" taulukon loppuun ja luo uusi taulukko.
 // Kirjoita koodisi tähän:
+teamMembers.push("Hemmo");
+console.log(teamMembers);
 
 // Harjoitus 11: Käyttäen `slice` kopioidaksesi koko taulukon
 // Kirjoita koodisi tähän:
+const newArray = teamMembers.slice(0, 4);
+console.log(newArray);
 
 // Harjoitus 12: Yhdistä taulukot käyttäen `concat`
 // Oletetaan, että `newMembers`-taulukko on määritelty
 let newMembers = ["Tiina", "Daniel"];
 // Kirjoita koodisi tähän:
+const joinedMembers = newMembers.concat(teamMembers);
+console.log(joinedMembers);
 
 // Harjoitus 13: Etsi kaikki Jukan esiintymät
 // Kirjoita koodisi tähän:
+console.log(newArray, teamMembers, joinedMembers, newMembers.includes("Jukka")); // Etsii löytyykö "Jukka mistään listoista ja palauttaa boolean arvon"
 
 // Harjoitus 14: Muuta jäsenet `map` avulla kirjoitettavaksi ISOILLA KIRJAIMILLA
 // Kirjoita koodisi tähän:
+const upperCaseList = teamMembers.map((teamMembers) =>
+  teamMembers.toUpperCase()
+);
+console.log(upperCaseList);

@@ -116,7 +116,7 @@ getOddYears([2000, 2015, 2018, 2020]) -> [2015]
 */
 
 // Kirjoita koodisi tähän
-const getOddYears = (oddYears) => oddYears.filter((year) => year % 2 !== 0);
+const getOddYears = (allYears) => allYears.filter((year) => year % 2 !== 0);
 // Testaus - Poista alta kommenttimerkinnät, niin voit testata funktion toimintaa
 console.log(getOddYears([2019, 2020, 2021])); // [2019, 2021]
 console.log(getOddYears([2000, 2015, 2018, 2020])); // [2015]

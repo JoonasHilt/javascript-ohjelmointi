@@ -8,10 +8,10 @@ Odotettu tulos:
 "Taulukon pituus on suurempi tai yhtä suuri kuin 5."
 */
 // Kirjoita funktiosi tähän
-function myAlphabetLength(taulukko) {
-  const length = taulukko.length;
-  console.log("Taulukon myAlphabet pituus: ", length);
-  if (length < 5) {
+function myAlphabetLength() {
+  const pituus = myAlphabet.length;
+  console.log("Taulukon myAlphabet pituus: ", pituus);
+  if (pituus < 5) {
     console.log("Taulukon pituus on alle 5.");
   } else {
     console.log("Taulukon pituus on suurempi tai yhtä suuri kuin 5.");
@@ -50,6 +50,10 @@ for (let i = 0; i < wowDatatypes.length; i++) {
   const type = typeof item;
   console.log(`Alkio: ${wowDatatypes[i]}, Indeksi: ${i}, Tyyppi: ${type}`);
 }
+//voi tehdä myös käyttäen forEach metodia
+wowDatatypes.forEach((alkio, indeksi) => {
+  console.log(`Alkio: ${alkio}, Indeksi: ${indeksi}, Tyyppi: ${typeof alkio}`);
+});
 
 // Harjoitus 4: Kirjaa taulukon alkiot ilman silmukkaa
 let myArr = [1, 2, "One", true];
@@ -58,15 +62,20 @@ Kirjaa jokainen alkio tässä taulukossa metodin avulla eli ilman silmukkaa.
 Odotetut tulokset: 1, 2, "One", true
 */
 // Kirjoita koodisi tähän
+myArr.forEach((alkio) => console.log(alkio));
 
 // Harjoitus 5: Etsi yhteiset kurssit kahden opiskelijan välillä
 let student1Courses = ["Matematiikka", "Englanti", "Ohjelmointi"];
 let student2Courses = ["Maantieto", "Espanja", "Ohjelmointi"];
 /*
-Tunnista ja kirjaa ylös kaikki kurssit, jotka ovat yhteisiä sekä student1Courses- että student2Courses-taulukossa.
-Odotettu tulos: "Yhteinen kurssi: Ohjelmointi"
-*/
+  Tunnista ja kirjaa ylös kaikki kurssit, jotka ovat yhteisiä sekä student1Courses- että student2Courses-taulukossa.
+  Odotettu tulos: "Yhteinen kurssi: Ohjelmointi"
+  */
 // Kirjoita koodisi tähän
+let commonCourses = student1Courses.filter((course) =>
+  student2Courses.includes(course)
+);
+commonCourses.forEach((course) => console.log("Yhteinen kurssi: " + course));
 
 // Harjoitus 6: Kirjaa jokainen taulukon alkion kirjain
 let furniture = ["Pöytä", "Tuolit", "Matto"];
@@ -78,6 +87,9 @@ Odotetut tulokset:
 "Kirjaimet 'Matto'-sanassa: M, a, t, t, o"
 */
 // Kirjoita koodisi tähän
+furniture.forEach((item) => {
+  console.log(`kirjaimet '${item}'-sanassa`, item.split("").join(","));
+});
 
 // Harjoitus 7: Suodata positiiviset lämpötilat
 let temperatures = [-5, 3, -1, 22, -40, 5, 18];
@@ -86,6 +98,13 @@ Kirjoita getPositiveTemperatures-funktio siten, että se palauttaa taulukon, jok
 Odotettu tulos: [3, 22, 5, 18]
 */
 // Kirjoita koodisi tähän
+const getPositiveTemperatures = () => {
+  const positiveTemperatures = temperatures.filter(
+    (temperatures) => temperatures > 0
+  );
+  console.log(positiveTemperatures);
+};
+getPositiveTemperatures();
 
 // Harjoitus 8: Suodata parittomat vuodet
 /*
@@ -97,7 +116,7 @@ getOddYears([2000, 2015, 2018, 2020]) -> [2015]
 */
 
 // Kirjoita koodisi tähän
-
+const getOddYears = (oddYears) => oddYears.filter((year) => year % 2 !== 0);
 // Testaus - Poista alta kommenttimerkinnät, niin voit testata funktion toimintaa
-// console.log(getOddYears([2019, 2020, 2021])); // [2019, 2021]
-// console.log(getOddYears([2000, 2015, 2018, 2020])); // [2015]
+console.log(getOddYears([2019, 2020, 2021])); // [2019, 2021]
+console.log(getOddYears([2000, 2015, 2018, 2020])); // [2015]

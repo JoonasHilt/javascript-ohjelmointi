@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
     basePriceDisplay.textContent = basePrice + "€";
   }
 
-  // Event listeners dropdownille ja checkboxeille
   typeSelect.addEventListener("change", updateTotalPrice);
   toppingCheckboxes.forEach(function (checkbox) {
     checkbox.addEventListener("change", updateTotalPrice);

@@ -6,6 +6,8 @@
 function getTemperature(temp) {
   if (temp < 15) {
     console.log("Kannattaa laittaa takki päälle! ");
+  } else {
+    console.log("Et tarvitse takkia ulkona!");
   }
 }
 
@@ -18,7 +20,9 @@ getTemperature(numero);
 // Treenaa: Keksi itse samanlainen funktio eri nimellä
 function whatTimeIsIt(time) {
   if (time > 15) {
-    console.log("lähdekotiin");
+    console.log("lähde kotiin");
+  } else {
+    console.log("Sinulla on vielä työpäivä kesken!");
   }
 }
 // Kutsu tekemääsi funktiota
